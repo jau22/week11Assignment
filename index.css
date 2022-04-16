@@ -1,0 +1,123 @@
+#board{
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+    position: relative;    
+}
+
+.x-hover:hover::after{
+    content:"X";
+    opacity: 30%;
+}
+
+.o-hover:hover::after{
+    content:"O";
+    opacity: 30%;
+}
+
+.strike{
+    position:absolute;
+    background-color: aquamarine;
+}
+
+.strike-row-1{
+    width:100%;
+    height:4px;
+    top: 15%;
+}
+
+.strike-row-2{
+    width:100%;
+    height:4px;
+    top: 48%;
+}
+
+.strike-row-3{
+    width:100%;
+    height:4px;
+    top: 83%;
+}
+
+.strike-col-1{
+    height:100%;
+    width:4px;
+    left: 15%;
+}
+
+.strike-col-2{
+    height:100%;
+    width:4px;
+    left: 48%;
+}
+
+.strike-col-3{
+    height:100%;
+    width:4px;
+    left: 83%;
+}
+
+.strike-dia-1{
+    width:90%;
+    height:4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.strike-dia-2{
+    width:90%;
+    height:4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-bot-border{
+    border-right:0.2em solid gray;
+    border-bottom:0.2em solid gray;
+}
+
+.right-border{
+    border-right:0.2em solid gray;
+}
+
+.bot-border{
+    border-bottom:0.2em solid gray;
+}
+
+#game-over-layout{
+    text-align: center;
+    background-color: rgb(171, 255, 227);
+    width: 50%;
+    padding: 32px;
+    margin-top: 40px;
+}
+
+.hidden{
+    display:none;
+}
+
+.visible{
+    display: block;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: #2f2f2f;
+}
+
+h2{
+    margin-top: 0px;
+}
